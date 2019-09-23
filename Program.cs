@@ -212,7 +212,7 @@ namespace Assignment1_F19
         public static void solvePuzzle()
         {
             try
-            {
+            {   //accept input from user for input and output strings
                 Console.Write("Enter  input String 1");
                 string str1 = Console.ReadLine();
                 Console.Write("Enter  input String 2");
@@ -221,7 +221,7 @@ namespace Assignment1_F19
                 string str3 = Console.ReadLine();
                 int Input1, Input2, Input3;
 
-
+                //brute force method of assigning values to each distict character from all the strings
                 for (int u = 0; u <= 9; u++)
                 {
                     for (int b = 0; b <= 9; b++)
@@ -239,11 +239,11 @@ namespace Assignment1_F19
                                         for (int l = 0; l <= 9; l++)
                                         {
                                             for (int n = 0; n <= 9; n++)
-                                            {
+                                            {// calculate value of each string 
                                                 Input1 = u * 1000 + b * 100 + e * 10 + r * 1;
                                                 Input2 = c * 1000 + o * 100 + o * 10 + l * 1;
                                                 Input3 = u * 10000 + n * 1000 + c * 100 + l * 10 + e * 1;
-
+                                             // check for which values string1+ string2 =output string and print them
                                                 if ((Input1 + Input2 == Input3) && (u != b) && (u != e) && (u != r) && (u != c) && (u != o) && (u != l) && (u != n) && (b != e) && (b != r) && (b != c) && (b != o) && (b != l) && (b != n) && (e != r) && (e != c) && (e != o) && (e != l) && (e != n) && (r != c) && (r != o) && (r != l) && (r != n) && (c != o) && (c != l) && (c != n) && (o != l) && (o != n) && (l != n))
                                                 {
                                                     Console.Write(str1 + "  = " + Input1 + "  " + str2 + " = " + Input2 + " " + str3 + " = " + Input3);
