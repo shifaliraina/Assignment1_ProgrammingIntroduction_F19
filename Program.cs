@@ -213,13 +213,76 @@ namespace Assignment1_F19
         {
             try
             {
-                // Write your code here
+                Console.Write("Enter  input String 1");
+                string str1 = Console.ReadLine();
+                Console.Write("Enter  input String 2");
+                string str2 = Console.ReadLine();
+                Console.Write("Enter output String ");
+                string str3 = Console.ReadLine();
+                int Input1, Input2, Input3;
+
+
+                for (int u = 0; u <= 9; u++)
+                {
+                    for (int b = 0; b <= 9; b++)
+                    {
+
+                        for (int e = 0; e <= 9; e++)
+                        {
+                            for (int r = 0; r <= 9; r++)
+
+                            {
+                                for (int c = 0; c <= 9; c++)
+                                {
+                                    for (int o = 0; o <= 9; o++)
+                                    {
+                                        for (int l = 0; l <= 9; l++)
+                                        {
+                                            for (int n = 0; n <= 9; n++)
+                                            {
+                                                Input1 = u * 1000 + b * 100 + e * 10 + r * 1;
+                                                Input2 = c * 1000 + o * 100 + o * 10 + l * 1;
+                                                Input3 = u * 10000 + n * 1000 + c * 100 + l * 10 + e * 1;
+
+                                                if ((Input1 + Input2 == Input3) && (u != b) && (u != e) && (u != r) && (u != c) && (u != o) && (u != l) && (u != n) && (b != e) && (b != r) && (b != c) && (b != o) && (b != l) && (b != n) && (e != r) && (e != c) && (e != o) && (e != l) && (e != n) && (r != c) && (r != o) && (r != l) && (r != n) && (c != o) && (c != l) && (c != n) && (o != l) && (o != n) && (l != n))
+                                                {
+                                                    Console.Write(str1 + "  = " + Input1 + "  " + str2 + " = " + Input2 + " " + str3 + " = " + Input3);
+                                                    Console.Write("\n");
+                                                    Console.Write(str1 + " + " + str2 + " = " + (Input1 + Input2) + "  : " + Input3 + " = " + str3);
+
+                                                    Console.Write("\nvalue of u is " + u);
+                                                    Console.Write("\n");
+
+
+                                                }
+
+
+
+
+                                            }
+
+
+
+
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
             }
             catch
             {
                 Console.WriteLine("Exception occured while computing solvePuzzle()");
             }
         }
+
+        
+         
+        
     }
 }
 
